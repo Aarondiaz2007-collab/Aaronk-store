@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AaronK | Clothing & Colognes</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#09090b;color:white;font-family:Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+
+.top{
+background:white;color:#111;text-align:center;
+padding:9px;font-size:11px;letter-spacing:1px
+}
+
+header{
+position:sticky;top:0;z-index:10;
+background:#09090bee;
+border-bottom:1px solid #29292d
+}
+
+.nav{
+max-width:1150px;margin:auto;padding:18px 22px;
+display:flex;align-items:center;justify-content:space-between
+}
+
+.logo{font-size:28px;font-weight:900;letter-spacing:2px}
+
+nav{display:flex;gap:25px;font-size:14px;color:#bbb}
+nav a:hover{color:white}
+
+.hero{
+max-width:1150px;margin:auto;padding:90px 22px;
+display:grid;grid-template-columns:1.2fr .8fr;
+gap:50px;align-items:center
+}
+
+.small{color:#999;letter-spacing:3px;font-size:11px}
+
+h1{
+font-size:clamp(48px,7vw,82px);
+line-height:.92;letter-spacing:-4px;
+margin:20px 0
+}
+
+.hero p{
+color:#aaa;line-height:1.7;
+font-size:17px;max-width:560px
+}
+
+.btn{
+display:inline-block;background:white;color:#111;
+padding:14px 21px;border-radius:8px;
+font-weight:bold;margin:10px 8px 0 0
+}
+
+.btn.outline{
+background:transparent;color:white;
+border:1px solid #444
+}
+
+.hero-card{
+height:390px;border:1px solid #303034;
+border-radius:22px;
+background:linear-gradient(145deg,#202023,#080809);
+display:grid;place-items:center;
+font-size:70px;font-weight:900;
+letter-spacing:8px
+}
+
+section{
+max-width:1150px;margin:auto;
+padding:40px 22px 75px
+}
+
+h2{font-size:31px;margin:0 0 25px}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px
+}
+
+.card{
+background:#141416;
+border:1px solid #29292d;
+border-radius:14px;
+overflow:hidden
+}
+
+.photo{
+height:270px;
+background:linear-gradient(135deg,#202024,#101012);
+display:grid;place-items:center;
+color:#666;font-size:11px
+}
+
+.info{padding:16px}
+.info small{color:#999;letter-spacing:2px;font-size:9px}
+.info h3{margin:8px 0}
+.info p{color:#888;font-size:12px}
+.price{font-weight:bold;font-size:17px}
+
+button{
+background:white;color:#111;
+border:0;border-radius:7px;
+padding:9px 12px;
+font-weight:bold;
+cursor:pointer;
+float:right
+}
+
+.contact{
+border-top:1px solid #29292d
+}
+
+footer{
+border-top:1px solid #29292d;
+text-align:center;
+padding:30px;
+color:#777;
+font-size:12px
+}
+
+@media(max-width:850px){
+.hero{grid-template-columns:1fr}
+.hero-card{height:250px}
+.grid{grid-template-columns:repeat(2,1fr)}
+nav{display:none}
+}
+
+@media(max-width:500px){
+.grid{gap:10px}
+.photo{height:190px}
+.info{padding:12px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+NEW DROPS • CLOTHING + FRAGRANCE • SHIPPING AVAILABLE
+</div>
+
+<header>
+<div class="nav">
+
+<div class="logo">AaronK</div>
+
+<nav>
+<a href="#shop">Shop</a>
+<a href="#colognes">Colognes</a>
+<a href="#clothing">Clothing</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+
+<div>
+
+<div class="small">AARONK / COLLECTION 2026</div>
+
+<h1>
+FRESH LOOK.<br>
+FRESH SCENT.
+</h1>
+
+<p>
+Shop selected clothing and fragrances from AaronK.
+New pieces and scents added regularly.
+</p>
+
+<a class="btn" href="#shop">Shop Collection</a>
+
+<a class="btn outline" href="#contact">Contact</a>
+
+</div>
+
+<div class="hero-card">
+AK
+</div>
+
+</section>
+
+<section id="shop">
+
+<h2>Featured</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="photo">YOUR PHOTO</div>
+<div class="info">
+<small>FRAGRANCE</small>
+<h3>Invictus EDT</h3>
+<p>50 ml fragrance.</p>
+<span class="price">$85</span>
+<button onclick="add()">Add</button>
+</div>
+</div>
+
+<div class="card">
+<div class="photo">YOUR PHOTO</div>
+<div class="info">
+<small>FRAGRANCE</small>
+<h3>Valentino Uomo</h3>
+<p>Selected fragrance.</p>
+<span class="price">Contact</span>
+<button onclick="add()">Add</button>
+</div>
+</div>
+
+<div class="card">
+<div class="photo">YOUR PHOTO</div>
+<div class="info">
+<small>CLOTHING</small>
+<h3>BAPE T-Shirt</h3>
+<p>Streetwear selection.</p>
+<span class="price">Contact</span>
+<button onclick="add()">Add</button>
+</div>
+</div>
+
+<div class="card">
+<div class="photo">YOUR PHOTO</div>
+<div class="info">
+<small>SNEAKERS</small>
+<h3>Selected Sneakers</h3>
+<p>Limited selections.</p>
+<span class="price">Contact</span>
+<button onclick="add()">Add</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="colognes">
+
+<h2>Colognes</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="photo">PRODUCT PHOTO</div>
+<div class="info">
+<small>FRAGRANCE</small>
+<h3>Fragrance 01</h3>
+<span class="price">$00</span>
+<button onclick="add()">Add</button>
+</div>
+</div>
+
+<div class="card">
+<div class="photo">PRODUCT PHOTO</div>
+<div class="info">
+<small>FRAGRANCE</small>
+<h3>Fragrance 02</h3>
+<span class="price">$00</span>
+<button onclick="add()">Add</button>
+</div>
+</div>
+
+<div class="card">
+<div class="photo">PRODUCT PHOTO</div>
+<div class="info">
+<small>FRAGRANCE</small>
+<h3>Fragrance 03</h3>
+<span class="price">$00</span>
+<button onclick="add()">Add</button>
+</div>
+</div>
+
+<div class="card">
+<div class="photo">PRODUCT PHOTO</div>
+<div class="info">
+<small>FRAGRANCE</small>
+<h3>Fragrance 04</h3>
+<span class="price">$00</span>
+<button onclick="add()">Add</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="clothing">
+
+<h2>Clothing</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="photo">PRODUCT PHOTO</div>
+<div class="info">
+<small>CLOTHING</small>
+<h3>T-Shirt</h3>
+<span class="price">$00</span>
+<button onclick="add()">Add</button>
+</div>
+</div>
+
+<div class="card">
+<div class="photo">PRODUCT PHOTO</div>
+<div class="info">
+<small>CLOTHING</small>
+<h3>Hoodie</h3>
+<span class="price">$00</span>
+<button onclick="add()">Add</button>
+</div>
+</div>
+
+<div class="card">
+<div class="photo">PRODUCT PHOTO</div>
+<div class="info">
+<small>SNEAKERS</small>
+<h3>Sneakers</h3>
+<span class="price">$00</span>
+<button onclick="add()">Add</button>
+</div>
+</div>
+
+<div class="card">
+<div class="photo">PRODUCT PHOTO</div>
+<div class="info">
+<small>ACCESSORIES</small>
+<h3>Accessories</h3>
+<span class="price">$00</span>
+<button onclick="add()">Add</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact & Orders</h2>
+
+<p>
+Message AaronK for availability, pricing, shipping and orders.
+</p>
+
+<a class="btn" href="https://wa.me/" target="_blank">
+WhatsApp
+</a>
+
+<a class="btn outline" href="#" target="_blank">
+Instagram
+</a>
+
+</section>
+
+<footer>
+© 2026 AaronK — Clothing & Colognes
+</footer>
+
+<script>
+function add(){
+alert("Added to your bag!");
+}
+</script>
+
+</body>
+</html>
